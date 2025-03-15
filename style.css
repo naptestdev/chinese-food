@@ -120,14 +120,13 @@ h6 {
   border-radius: 12px;
 }
 
-/* Responsive styles */
 @media screen and (max-width: 768px) {
   .hero h1 {
     font-size: 2.5rem;
   }
 
   .hero p {
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 
   .cta-button {
@@ -135,25 +134,75 @@ h6 {
     font-size: 1rem;
   }
 
+  .main {
+    padding: 32px 0;
+  }
+
   .main p {
-    font-size: 1rem;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
   }
 
   .main h2 {
-    font-size: 2rem;
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+    margin-top: 2.5rem;
   }
 
   .main h3 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    margin-top: 2.5rem;
   }
 
   .image-container {
     height: 320px;
+    margin-top: 1.5rem;
+    gap: 16px;
   }
 }
 
 @media screen and (max-width: 480px) {
   .hero h1 {
     font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .main {
+    padding: 24px 0;
+  }
+
+  .main p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .main h2 {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+    margin-top: 2rem;
+  }
+
+  .main h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    margin-top: 2rem;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .image-container {
+    height: 240px;
+    margin-top: 1.25rem;
+    gap: 12px;
   }
 }
