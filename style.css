@@ -1,3 +1,4 @@
+/* Base Styles */
 @import url("https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
@@ -22,6 +23,14 @@ h6 {
   font-style: normal;
 }
 
+/* Layout */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Section */
 .hero {
   height: 480px;
   background-image: url("./assets/hero-image.png");
@@ -50,6 +59,7 @@ h6 {
   margin-bottom: 2rem;
 }
 
+/* Buttons */
 .cta-button {
   padding: 12px 32px;
   font-size: 1.1rem;
@@ -65,12 +75,7 @@ h6 {
   background-color: #c41330;
 }
 
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
+/* Main Content */
 .main {
   padding: 40px 0;
 }
@@ -95,6 +100,7 @@ h6 {
   margin-top: 3rem;
 }
 
+/* Image Container */
 .image-container {
   display: flex;
   margin-top: 2rem;
@@ -104,14 +110,12 @@ h6 {
   height: 480px;
   gap: 20px;
   border-radius: 12px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-.image-container {
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
-  scrollbar-width: none; /* Firefox */
-}
 .image-container::-webkit-scrollbar {
-  display: none; /* Safari and Chrome */
+  display: none;
 }
 
 .image-container img {
@@ -120,6 +124,132 @@ h6 {
   border-radius: 12px;
 }
 
+/* Contact Section */
+.contact {
+  background-color: #faf5e6;
+  padding: 60px 0;
+}
+
+.contact h2 {
+  color: #8b0000;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #4a1c1c;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #d4a017;
+  border-radius: 4px;
+  background-color: #fff;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #8b0000;
+}
+
+.form-group textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background-color: #8b0000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #6b0000;
+}
+
+/* Footer */
+.footer {
+  background-color: #2b1911;
+  color: #fff;
+  padding: 40px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-info,
+.footer-video {
+  flex: 1;
+}
+
+.footer-info h3 {
+  color: #d4a017;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.footer-info p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.footer-info a {
+  color: #d4a017;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-info a:hover {
+  color: #fff;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Media Queries */
 @media screen and (max-width: 768px) {
   .hero h1 {
     font-size: 2.5rem;
@@ -160,6 +290,27 @@ h6 {
     height: 320px;
     margin-top: 1.5rem;
     gap: 16px;
+  }
+
+  .contact {
+    padding: 40px 0;
+  }
+
+  .contact-form {
+    padding: 0 20px;
+  }
+
+  .footer {
+    padding: 30px 0;
+  }
+
+  .footer-info h3 {
+    font-size: 1.25rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 30px;
   }
 }
 
@@ -204,5 +355,32 @@ h6 {
     height: 240px;
     margin-top: 1.25rem;
     gap: 12px;
+  }
+
+  .contact {
+    padding: 32px 0;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 10px;
+  }
+
+  .submit-button {
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .footer {
+    padding: 24px 0;
+    margin-top: 32px;
+  }
+
+  .footer-info p {
+    font-size: 0.9rem;
+  }
+
+  .footer-content {
+    gap: 24px;
   }
 }
